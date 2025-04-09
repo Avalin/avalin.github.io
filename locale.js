@@ -28,9 +28,9 @@ const translations = {
     da: {
       name: "Avalin",
       tagline: "Kreativ teknolog · Interaktiv udvikler · Logiknørd",
-      about_title: "Om Mig",
+      about_title: "Om mig",
       about_text: "Hej! Mit navn er Astrid Avalin, en software ingeniør og en kreativ teknolog med kærlighed til skæve interfaces, logisk problemløsning og interaktive oplevelser. Jeg har bygget alt fra backend-planlæggere til WebVR-verdener og bidraget til projekter som LEGO Super Mario og en guided tour ved AquaGlobe. Når jeg ikke koder, beundrer jeg nok mine katte eller designer noget, ingen har bedt om (men som er ret sejt alligevel).",
-      projects_title: "Udvalgte Projekter",
+      projects_title: "Udvalgte projekter",
       project_nbfc_title: "Nightmare Before Christmas VR",
       project_nbfc_desc: "Blik-baseret interaktion i WebVR med A-Frame, lavet omkring NBC karakterer. Disse er bl.a. animeret igennem Mixamo's bibliotek.",
       project_pokemon_title: "Pokémon VR",
