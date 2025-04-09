@@ -47,7 +47,7 @@ const translations = {
       tech_list: "C# · Unity · JavaScript · WebVR · A-Frame · Three.js · HTML/CSS · Drools · Git · VR APIs · Google Apps Script · Bootstrap",
       connect_title: "Forbind med mig",
       github: "GitHub @Avalin",
-      email: "Skriv en mail",
+      email: "Skriv en email",
       resume: "Download CV",
       footer: "© 2025 Avalin. Bygget med kode, kreativitet og sikkert også nogle tårer."
     }
