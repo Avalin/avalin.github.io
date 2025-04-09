@@ -64,7 +64,7 @@ const translations = {
     });
   
     // Update resume button link based on language
-    const resumeBtn = document.querySelector('.resume-btn');
+    const resumeBtn = document.querySelector('a[data-i18n="resume"]');
     if (currentLang === 'da') {
       resumeBtn.setAttribute('href', 'documents/CV-2025-DK.pdf');
     } else {
