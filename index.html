@@ -11,16 +11,30 @@
         height: auto;
         min-height: 100vh;
         font-family: 'Segoe UI', sans-serif;
-        background: radial-gradient(ellipse at top, #0e0e0e 0%, #000000 100%);
+        background: radial-gradient(circle at top, #101010 0%, #000 90%);
         color: white;
         overflow-x: hidden;
         scroll-behavior: smooth;
+        position: relative;
       }
 
-      body {
-        overflow-y: auto;
-        position: relative;
-        z-index: 1;
+      body::before {
+        content: "";
+        position: fixed;
+        top: -200px;
+        left: -200px;
+        width: 140%;
+        height: 140%;
+        background: radial-gradient(circle at center, rgba(0, 255, 255, 0.08), transparent 60%),
+                    radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.03), transparent 50%);
+        pointer-events: none;
+        z-index: 0;
+        animation: slowGlow 20s infinite alternate ease-in-out;
+      }
+
+      @keyframes slowGlow {
+        0% { transform: scale(1) rotate(0deg); }
+        100% { transform: scale(1.2) rotate(15deg); }
       }
 
       canvas {
@@ -59,7 +73,6 @@
         margin: 0 auto;
         position: relative;
         z-index: 1;
-        overflow: visible;
       }
 
       .project-grid {
@@ -129,7 +142,7 @@
       }
 
       .resume-btn {
-        background: #0ff;
+        background: linear-gradient(135deg, #00f0ff, #38f9d7);
         color: #000;
         padding: 0.7rem 1.5rem;
         border: none;
@@ -139,6 +152,12 @@
         text-decoration: none;
         margin: 0.25rem 0;
         width: fit-content;
+        box-shadow: 0 0 12px #00f0ff80;
+        transition: background 0.3s ease;
+      }
+
+      .resume-btn:hover {
+        background: linear-gradient(135deg, #38f9d7, #00f0ff);
       }
 
       footer {
@@ -220,7 +239,7 @@
 
     <section class="connect" data-aos="fade-up">
       <h2>Let's Connect</h2>
-      <a href="https://github.com/Avalin" target="_blank">GitHub @Avalin</a>
+      <a href="https://github.com/Avalin" class="resume-btn" target="_blank">GitHub @Avalin</a>
       <a href="mailto:astridavalin@gmail.com" class="resume-btn">Email Me</a>
       <a href="documents/Avalin_Resume.pdf" class="resume-btn" download>Download Resume</a>
     </section>
@@ -251,7 +270,8 @@
       }
       particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
-      const particleMaterial = new THREE.PointsMaterial({ color: 0x00ffff, size: 0.05 });
+      let hue = 180;
+      const particleMaterial = new THREE.PointsMaterial({ size: 0.05, color: new THREE.Color(`hsl(${hue}, 100%, 60%)`) });
       const points = new THREE.Points(particles, particleMaterial);
       scene.add(points);
 
@@ -259,6 +279,8 @@
 
       function animate() {
         requestAnimationFrame(animate);
+        hue = (hue + 0.1) % 360;
+        particleMaterial.color.setHSL(hue / 360, 1, 0.6);
         points.rotation.y += 0.0015;
         points.rotation.x += 0.001;
         renderer.render(scene, camera);
