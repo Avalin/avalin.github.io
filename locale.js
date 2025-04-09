@@ -54,7 +54,7 @@ const translations = {
   };
   
   let currentLang = 'en';
-  
+
   function translatePage() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -63,16 +63,27 @@ const translations = {
       }
     });
   
-    // Update the button emoji
-    document.getElementById('lang-toggle').textContent = currentLang === 'en' ? '🇬🇧' : '🇩🇰';
+    // Update button styles
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.dataset.lang === currentLang) {
+        btn.classList.add('active');
+      }
+    });
   }
   
-  document.getElementById('lang-toggle').addEventListener('click', () => {
-    currentLang = currentLang === 'en' ? 'da' : 'en';
+  function setLanguage(lang) {
+    if (lang === currentLang) return;
+    currentLang = lang;
     translatePage();
+  }
+  
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
   
   window.addEventListener('DOMContentLoaded', () => {
     translatePage();
   });
+  
   
