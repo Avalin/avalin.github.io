@@ -54,7 +54,7 @@ const translations = {
   };
   
   let currentLang = 'en';
-
+  
   function translatePage() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -62,6 +62,14 @@ const translations = {
         el.innerHTML = translations[currentLang][key];
       }
     });
+  
+    // Update resume button link based on language
+    const resumeBtn = document.querySelector('.resume-btn');
+    if (currentLang === 'da') {
+      resumeBtn.setAttribute('href', 'documents/CV-2025-DK.pdf');
+    } else {
+      resumeBtn.setAttribute('href', 'documents/CV-2025-EN.pdf');
+    }
   
     // Update button styles
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -85,5 +93,4 @@ const translations = {
   window.addEventListener('DOMContentLoaded', () => {
     translatePage();
   });
-  
   
