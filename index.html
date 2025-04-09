@@ -8,7 +8,6 @@
       html, body {
         margin: 0;
         padding: 0;
-        height: auto;
         min-height: 100vh;
         font-family: 'Segoe UI', sans-serif;
         background: radial-gradient(circle at top, #101010 0%, #000 90%);
@@ -67,7 +66,6 @@
       }
 
       section {
-        display: block;
         padding: 4rem 2rem;
         max-width: 1100px;
         margin: 0 auto;
@@ -199,6 +197,7 @@
     <section data-aos="fade-up">
       <h2 style="text-align:center;">Featured Projects</h2>
       <div class="project-grid">
+        <!-- Swap these out with your actual images and URLs -->
         <div class="project-card" data-aos="zoom-in">
           <img src="images/nbfc.gif" alt="Nightmare VR Preview">
           <h3>Nightmare Before Christmas VR</h3>
@@ -270,7 +269,7 @@
       }
       particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
-      let hue = 180;
+      let hue = 185;
       const particleMaterial = new THREE.PointsMaterial({ size: 0.05, color: new THREE.Color(`hsl(${hue}, 100%, 60%)`) });
       const points = new THREE.Points(particles, particleMaterial);
       scene.add(points);
@@ -279,8 +278,8 @@
 
       function animate() {
         requestAnimationFrame(animate);
-        hue = (hue + 0.1) % 360;
-        particleMaterial.color.setHSL(hue / 360, 1, 0.6);
+        hue = (hue + 0.05) % 360;
+        particleMaterial.color.setHSL((180 + Math.sin(hue * 0.02) * 20) / 360, 1, 0.6);
         points.rotation.y += 0.0015;
         points.rotation.x += 0.001;
         renderer.render(scene, camera);
