@@ -186,7 +186,7 @@ html, body {
     border: 2px solid #0ff;
     background: transparent;
     cursor: pointer;
-    padding: 4px;
+    padding: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,10 +194,12 @@ html, body {
   }
   
   .lang-btn img {
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
     object-fit: contain;
   }
+  
+  
   
   .lang-btn:hover {
     background: rgba(0, 255, 255, 0.08);
