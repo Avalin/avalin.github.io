@@ -22,6 +22,7 @@ const translations = {
       connect_title: "Let's Connect",
       github: "GitHub @Avalin",
       email: "Email Me",
+      linkedin: "My LinkedIn",
       resume: "Download Resume",
       footer: "© 2025 Avalin. Built with code, creativity, and probably some crying."
     },
@@ -48,6 +49,7 @@ const translations = {
       connect_title: "Forbind med mig",
       github: "GitHub @Avalin",
       email: "Skriv en email",
+      linkedin: "Min LinkedIn",
       resume: "Download CV",
       footer: "© 2025 Avalin. Bygget med kode, kreativitet og sikkert også nogle tårer."
     }
