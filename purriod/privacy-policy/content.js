@@ -1,10 +1,10 @@
 const legalPageContent = {
   header: "Privacy Policy",
-  effectiveDateLabel: "Effective date: July 15, 2025",
+  effectiveDateLabel: "Effective date: May 30, 2026",
   footerText: "Thank you for using Purriod 🐾",
 
   contact: {
-    title: "11. Contact Us",
+    title: "12. Contact Us",
     text: "If you have questions or concerns about this Privacy Policy, please contact us at:",
     email: "astridavalin@gmail.com"
   },
@@ -17,7 +17,7 @@ const legalPageContent = {
       title: "1. Introduction",
       paragraphs: [
         "Purriod (“we”, “us”, or “our”) is committed to protecting and respecting your privacy. This Privacy Policy explains how information is handled when you use the Purriod mobile app.",
-        "Purriod is designed to help users track and manage cat-related information such as profiles, logs, reminders, and photos."
+        "Purriod is designed to help users track and manage cat-related information such as profiles, reproductive history, heat cycles, pregnancy information, logs, reminders, and photos."
       ]
     },
     {
@@ -32,7 +32,7 @@ const legalPageContent = {
       list: [
         "<strong>Camera</strong> – to let you take photos of your cat within the app.",
         "<strong>Photos / media library</strong> – to let you choose existing images from your device, if supported by your platform.",
-        "<strong>Local storage</strong> – to store cat profiles, logs, settings, backups, and images locally on your device.",
+        "<strong>Local storage</strong> – to store cat profiles, reproductive history, logs, settings, backups, and images locally on your device.",
         "<strong>Notifications</strong> – to send optional reminders and alerts that you choose to enable."
       ]
     },
@@ -42,7 +42,7 @@ const legalPageContent = {
       sectionLabel: "Use of Data",
       title: "3. How We Use Your Data",
       list: [
-        "<strong>App functionality:</strong> Data stored in the app is used to provide features such as cat tracking, logs, reminders, and photo management.",
+        "<strong>App functionality:</strong> Data stored in the app is used to provide features such as cat tracking, reproductive history, heat cycle tracking, pregnancy tracking, logs, reminders, and photo management.",
         "<strong>Photos:</strong> Images you add are used only within the app unless you choose to export or share them.",
         "<strong>Backups:</strong> If you export your data, Purriod creates a backup file for your own use. Once exported or shared outside the app, that file is under your control.",
         "<strong>No sale of data:</strong> We do not sell your personal data to third parties."
@@ -79,24 +79,38 @@ const legalPageContent = {
       title: "6. Analytics and Diagnostics",
       paragraphs: [
         "Purriod may use analytics or diagnostic services to help improve functionality, stability, and user experience.",
+        "Purriod may use third-party diagnostic services such as Sentry to collect crash reports, performance information, and technical diagnostics when the app encounters errors.",
         "These services may collect limited technical information such as:",
         "This information is used to understand app performance, fix issues, and improve the product. Third-party analytics or diagnostic providers process this information according to their own privacy policies.",
+        'For more information about Sentry, you can read Sentry’s Privacy Policy: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Sentry Privacy Policy</a>',
         'For example, if you use Google-provided services, you can learn more in Google’s Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>'
       ],
       list: [
         "Device model and operating system version",
         "App version",
         "Feature usage information",
-        "Crash reports and performance diagnostics"
+        "Crash reports and performance diagnostics",
+        "Technical error information needed to investigate and fix app issues"
+      ]
+    },
+    {
+      id: "predictions",
+      navLabel: "Predictions",
+      sectionLabel: "Predictions",
+      title: "7. Predictions and Informational Content",
+      paragraphs: [
+        "Purriod may provide predictions, estimates, reminders, and reproductive insights based on information entered into the app.",
+        "These features are intended for informational purposes only and may not always be accurate. Purriod does not provide veterinary advice, diagnosis, or treatment recommendations.",
+        "Always consult a qualified veterinarian regarding your cat’s health, reproduction, pregnancy, or medical care."
       ]
     },
     {
       id: "security",
       navLabel: "Security",
       sectionLabel: "Security",
-      title: "7. Data Storage and Security",
+      title: "8. Data Storage and Security",
       paragraphs: [
-        "Cat profiles, logs, settings, reminders, and images are primarily stored locally on your device. Purriod does not upload your personal content to our own external servers unless a future feature explicitly says otherwise.",
+        "Cat profiles, reproductive history, logs, settings, reminders, and images are primarily stored locally on your device. Purriod does not upload your personal content to our own external servers unless a future feature explicitly says otherwise.",
         "While we take reasonable steps to support a privacy-friendly app experience, no device or storage method can be guaranteed to be completely secure."
       ]
     },
@@ -104,7 +118,7 @@ const legalPageContent = {
       id: "deletion",
       navLabel: "Deletion",
       sectionLabel: "Deletion",
-      title: "8. Data Deletion",
+      title: "9. Data Deletion",
       paragraphs: [
         "You can remove app data at any time through features provided in the app, such as deleting individual content or clearing stored data.",
         "This may include:",
@@ -113,6 +127,7 @@ const legalPageContent = {
       list: [
         "Deleting cat photos",
         "Deleting cat profiles or logs",
+        "Deleting reproductive history, heat cycle records, or pregnancy records",
         "Removing reminders or notification settings",
         "Deleting exported backup files you have saved"
       ]
@@ -121,16 +136,16 @@ const legalPageContent = {
       id: "children",
       navLabel: null,
       sectionLabel: "Children",
-      title: "9. Children’s Privacy",
+      title: "10. Children’s Privacy",
       paragraphs: [
-        "Purriod is not intended for young children, and we do not knowingly collect personal information from children through the app. If you believe a child has provided personal information in connection with the app, please contact us so we can address the issue."
-      ]
-    },
+        "Purriod is intended for use by cat owners, breeders, and caretakers. We do not knowingly collect personal information from children. If you believe a child has provided personal information in connection with the app, please contact us so we can address the issue."
+	  ]
+	},
     {
       id: "changes",
       navLabel: null,
       sectionLabel: "Changes",
-      title: "10. Changes to This Policy",
+      title: "11. Changes to This Policy",
       paragraphs: [
         "We may update this Privacy Policy from time to time. If we make material changes, we will update the effective date shown at the top of this page."
       ]
